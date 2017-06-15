@@ -6,10 +6,12 @@ body {
     text-align: center;
 }
 
-h1 {
+div {
     color: white;
     text-align: center;
     text-shadow: 0 0 20px gold;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 body {
@@ -21,10 +23,10 @@ body {
 }
 
 .clock {
-    box-shadow: 0 0 20px 20px rgba(255,255,255,.5);
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, .5);
     width: 30rem;
     height: 30rem;
-    border: 20px solid rgba(255,215,0, .8);
+    border: 20px solid rgba(255, 215, 0, .8);
     border-radius: 20%;
     margin: 50px auto;
     position: relative;
@@ -49,4 +51,43 @@ body {
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, .58, 1);
+}
+
+#digital {
+    display: none;
+    font-size: 4em;
+    background: black;
+    color: white;
+    width: 30rem;
+    height: 8rem;
+    border: 20px solid rgba(255, 215, 0, .8);
+    border-radius: 20px;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px white, inset 0 0 10px white, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#analog {
+    display: block;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* account for the height of the clock hands */
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.2s;
+    transition-timing-function: cubic-bezier(1, -1.08, 1, 1);
 }

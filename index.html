@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>It's Time...</title>
-  
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>It's Time...</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/semantic.css">
 </head>
+
 <body>
+    <main class="ui center aligned grid container">
 
-    <div><h1>6:30 is the best time on a clock, hands down.</h1></div>
+        <div class="center aligned column">
 
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div> 
+            <h1>Who said waiting to read the clock is boring? Jazz Out!</h1>
+
+            <button class="ui green button" id="toggle">Click me!</button>
+
+
+
+
+            <div class="clock" id="analog">
+                <div class="clock-face pulse">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand second-hand"></div>
+                </div>
+            </div>
+
+
+
+            <div id="digital">
+            </div>
+
+        </div>
+    </main>
+    <div class="audio">
+        <audio controls autoplay loop="audio-example">
+            <source src="sounds/funky.mp3">You will see this text if native audio playback is not supported.</audio>
     </div>
-    
-<script src="js/jquery.js"></script>    
-<script src="js/scripts.js"></script>    
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/semantic.js"></script>
 </body>
+
 </html>
